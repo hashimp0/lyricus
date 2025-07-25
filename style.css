@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: #8630FF;
+}
+nav{
+    margin-left: 73%;
+    text-align: center;
+    margin-top: 60px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-family: roboto;
+}
+.site-name{
+    color: white;
+    font-size: 130px;
+    font-family: poppins;
+    text-align: center;
+    margin-top: 4%;
+}
+.site-usage{
+    color: white;
+    margin-left: 44%;
+    font-family: poppins;
+    margin-top: -7.2%;
+}
+.search-box{
+    margin-left: 37%;
+    margin-top: 4%;
+    display: flex;
+}
+.search-box input{
+    width: 400px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px 0px 0px  20px;
+    background-color: rgb(245, 245, 245);
+    -webkit-border-radius: 20px 0px 0px  20px;
+    -moz-border-radius: 20px 0px 0px  20px;
+    -ms-border-radius: 20px 0px 0px  20px;
+    -o-border-radius: 20px 0px 0px  20px;
+    color: rgb(161, 161, 161);
+    box-shadow: 0 0 10px 5px rgb(178, 178, 178);
+}
+.search-button{
+    width: 50px;
+    border-radius: 0 20px 20px 0;
+    background-color: rgb(245, 245, 245);
+    height: 42px;
+    margin-left: 4px;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    -ms-border-radius: 0 20px 20px 0;
+    -o-border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 10px 5px rgb(178, 178, 178);
+}
+.search-button svg{
+    width: 25px;
+    margin-top: -4px;
+    margin-left: 19%;
+}
