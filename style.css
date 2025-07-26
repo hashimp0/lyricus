@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0%;
-    background-color: #8630FF;
+    background-color: white;
 }
 nav{
     margin-left: 73%;
@@ -10,58 +10,136 @@ nav{
 }
 nav a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding-left: 20px;
     font-family: roboto;
 }
 .site-name{
-    color: white;
-    font-size: 130px;
+    color: black;
+    font-size: 100px;
     font-family: poppins;
     text-align: center;
     margin-top: 4%;
 }
 .site-usage{
-    color: white;
-    margin-left: 44%;
+    color: black;
+    margin-left: 46%;
     font-family: poppins;
-    margin-top: -7.2%;
+    margin-top: -5.4%;
 }
-.search-box{
-    margin-left: 37%;
-    margin-top: 4%;
+.search-box {
+    margin-left: 34%;
+    margin-top: 5%;
     display: flex;
+    align-items: center;
+    position: relative;
 }
-.search-box input{
-    width: 400px;
-    height: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+
+.search-box input {
+    width: 500px;
+    height: 60px;
+    padding: 0 50px 0 30px;
     outline: none;
+    font-size: 16px;
     border: none;
-    border-radius: 20px 0px 0px  20px;
-    background-color: rgb(245, 245, 245);
-    -webkit-border-radius: 20px 0px 0px  20px;
-    -moz-border-radius: 20px 0px 0px  20px;
-    -ms-border-radius: 20px 0px 0px  20px;
-    -o-border-radius: 20px 0px 0px  20px;
-    color: rgb(161, 161, 161);
-    box-shadow: 0 0 10px 5px rgb(178, 178, 178);
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
 }
-.search-button{
+
+.search-box input:focus {
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.4);
+    background: #fff;
+}
+
+.search-button {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border-radius: 50%;
     width: 50px;
-    border-radius: 0 20px 20px 0;
-    background-color: rgb(245, 245, 245);
-    height: 42px;
-    margin-left: 4px;
-    -webkit-border-radius: 0 20px 20px 0;
-    -moz-border-radius: 0 20px 20px 0;
-    -ms-border-radius: 0 20px 20px 0;
-    -o-border-radius: 0 20px 20px 0;
-    box-shadow: 0 0 10px 5px rgb(178, 178, 178);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    margin-left: 20px;
 }
-.search-button svg{
-    width: 25px;
-    margin-top: -4px;
-    margin-left: 19%;
+
+.search-button:hover {
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.4);
+    background: #fff;
+}
+
+.search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: black;
+}
+
+/* Clear button (×) */
+.clear-button {
+    position: absolute;
+    right: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+    display: none;
+    user-select: none;
+}
+.clear-button:hover {
+    color: #333;
+}
+
+section{
+    display: flex;
+    margin-left: 10%;
+}
+.main-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.music-1 {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+    margin-bottom: 30%;
+    margin-top: 30%;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+}
+
+.music-1:hover {
+    transform: scale(1.05);
+}
+
+.music-1 h2{
+    font-family: poppins;
+    font-size: 25px;
+    display: none;
+}
+.music-1 img{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 250px;
+}
+.music-1 P{
+    display: none;
+}
+footer{
+    background-color: black;
+    height: 800px;
+    margin-top: 10%;
 }
