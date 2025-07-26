@@ -19,7 +19,7 @@ nav a{
     font-size: 100px;
     font-family: poppins;
     text-align: center;
-    margin-top: 4%;
+    margin-top: 2%;
 }
 .site-usage{
     color: black;
@@ -37,7 +37,7 @@ nav a{
 
 .search-box input {
     width: 500px;
-    height: 60px;
+    height: 50px;
     padding: 0 50px 0 30px;
     outline: none;
     font-size: 16px;
@@ -47,6 +47,10 @@ nav a{
     color: #333;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease, background 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease, background 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease, background 0.3s ease;
+    -ms-transition: box-shadow 0.3s ease, background 0.3s ease;
+    -o-transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .search-box input:focus {
