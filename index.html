@@ -3,64 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="La Biblioteca.co | A Free Book Searching App" />
-    <meta property="og:description" content="Find and explore free books easily with La Biblioteca.co." />
-    <meta property="og:image" content="https://lyricus.vercel.app/logo.jpeg" />
-    <meta property="og:url" content="https://lyricus.vercel.app/" />
-    <meta property="og:type" content="website" />
-    <title>Lyricus | A Free Music Lyrics App</title>
-    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <title>Lyricus - Music Lyrics</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="site-header">
+        <div class="logo">Lyricus</div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">About Us</a>
             <a href="#">Explore</a>
+            <a href="#">About</a>
             <a href="#">Contact</a>
         </nav>
     </header>
-    <h1 class="site-name">Lyricus</h1>
-    <h2 class="site-usage">search. sing. inspire.</h2>
-    <div class="search-box">
-        <input type="text" placeholder="search your song, artist or lyrics" id="searchBar" >
-        <div class="search-button" id="searchButton">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
-                <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
-            </svg>
-        </div>
-    </div>
-    <section class="main-section">
-        <div class="music-1"><img src="shapeofyou.png" alt="shapeofyou" onclick="window.location.href='shapeofyou.pdf'"><h2>Shape of You</h2><p>ed sheeran</p></div>
-        <div class="music-1"><img src="believer.jpg" alt=""><h2>Believer</h2><p>imagine dragons</p></div>
-        <div class="music-1"><img src="faded.png" alt=""><h2>Faded</h2><p>alan walker</p></div>
-        <div class="music-1"><img src="Senorita.png" alt=""><h2>Senorita</h2><p>Shawn Mendes</p><p>Camila Cabello</p></div>
-        <div class="music-1"><img src="letmedownslowly.png" alt=""><h2>let me down slowly</h2><p>Alec Benjamin</p><p>Alessia Cara</p></div>
-        <div class="music-1"><img src="arcade.png" alt=""><h2>arcade</h2><p>Duncan Laurence</p></div>
-        <div class="music-1"><img src="notlikeus.png" alt=""><h2>not like us</h2><p>Kendrick Lamar</p></div>
-        <div class="music-1"><img src="divide.png" alt="shapeofyou"><h2>divide<h2><p>ed sheeran</p></div>
-        <div style="display: none;">
-            <div class="music-1"><img src="blue.png" alt=""><h2>blue</h2><p>yung kai</p></div>
-            <div class="music-1"><img src="loveisgone.png" alt=""><h2>love is gone</h2><p>Dylan Matthew SLANDER</p></div>
-            <div class="music-1"><img src="sapphire.png" alt=""><h2>sapphire</h2><p>ed sheeran</p></div>
-            <div class="music-1"><img src="ishqlostfound.png" alt="shapeofyou"><h2>ishq lost found<h2><p>faheem abdullah Amir Ameer Rauhan Malik</p></div>
-            <div class="music-1"><img src="mockingbird.jpg" alt=""><h2>mocking bird mockingbird</h2><p>eminem</p></div>
-            <div class="music-1"><img src="arcade.png" alt=""><h2>arcade</h2><p>Duncan Laurence</p></div>
-            <div class="music-1"><img src="notlikeus.png" alt=""><h2>not like us</h2><p>Kendrick Lamar</p></div>
-            <div class="music-1"><img src="divide.png" alt="shapeofyou"><h2>divide<h2><p>ed sheeran</p></div>
-            <div class="music-1"><img src="beanie.jpg" alt=""><h2>beanie</h2><p>chezile</p></div>
-            <div class="music-1"><img src="arcade.png" alt=""><h2>arcade</h2><p>Duncan Laurence</p></div>
-            <div class="music-1"><img src="notlikeus.png" alt=""><h2>not like us</h2><p>Kendrick Lamar</p></div>
-            <div class="music-1"><img src="divide.png" alt="shapeofyou"><h2>divide<h2><p>ed sheeran</p></div>
+    <section class="hero">
+        <h1>Lyricus</h1>
+        <p>Search. Sing. Inspire.</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search your song, artist, or lyrics" id="searchBar">
+            <span class="clear-button" id="clearBtn">&times;</span>
+            <div class="search-button" id="searchButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"></path>
+                </svg>
+            </div>
         </div>
     </section>
-<footer>
+    <section class="main-section">
+        <div class="music-1" data-title="Shape of You">
+            <a href="shapeofyou.html"><img src="shapeofyou.png" alt="Shape of You"></a>
+            <h2>Shape of You</h2><p>Ed Sheeran</p>
+        </div>
+        <div class="music-1" data-title="Believer">
+            <a href="believer.html"><img src="believer.jpg" alt="Believer"></a>
+            <h2>Believer</h2><p>Imagine Dragons</p>
+        </div>
+        <div class="music-1" data-title="Faded">
+            <a href="faded.html"><img src="faded.png" alt="Faded"></a>
+            <h2>Faded</h2><p>Alan Walker</p>
+        </div>
+        <div class="music-1" data-title="Senorita">
+            <img src="Senorita.png" alt="Senorita">
+            <h2>Senorita</h2><p>Shawn Mendes & Camila Cabello</p>
+        </div>
+        <div class="music-1" data-title="Let Me Down Slowly">
+            <img src="letmedownslowly.png" alt="Let Me Down Slowly">
+            <h2>Let Me Down Slowly</h2><p>Alec Benjamin</p>
+        </div>
+        <div class="music-1" data-title="Arcade">
+            <img src="arcade.png" alt="Arcade">
+            <h2>Arcade</h2><p>Duncan Laurence</p>
+        </div>
+        <div class="music-1" data-title="Not Like Us">
+            <img src="notlikeus.png" alt="Not Like Us">
+            <h2>Not Like Us</h2><p>Kendrick Lamar</p>
+        </div>
+        <div class="music-1" data-title="Divide">
+            <img src="divide.png" alt="Divide">
+            <h2>Divide</h2><p>Ed Sheeran</p>
+        </div>
+        <div class="hiden">
+            <div class="music-1" data-title="Shape of You">
+            <img src="beanie.jpg" alt="Shape of You" onclick="window.location.href='shapeofyou.pdf'">
+            <h2>Beanie</h2><p>Chezile</p>
+        </div>
+        <div class="music-1" data-title="Believer">
+            <img src="timeless.jpg" alt="Believer">
+            <h2>Timeless</h2><p>The Weekend & ft.Play boi carti</p>
+        </div>
+        <div class="music-1" data-title="Faded">
+            <img src="hymnoftheweekend.jpg" alt="Faded">
+            <h2>Hymn of The Weekend</h2><p>Coldplay</p>
+        </div>
+        <div class="music-1" data-title="Senorita">
+            <img src="loveisgone.png" alt="Senorita">
+            <h2>Love Is Gone</h2><p>SLENDER</p>
+        </div>
+        <div class="music-1" data-title="Let Me Down Slowly">
+            <img src="sapphire.png" alt="Let Me Down Slowly">
+            <h2>Sapphire</h2><p>Ed Sheeran</p>
+        </div>
+        <div class="music-1" data-title="Arcade">
+            <img src="mockingbird.jpg" alt="Arcade">
+            <h2>Mockingbird</h2><p>Eminem</p>
+        </div>
+        <div class="music-1" data-title="Not Like Us">
+            <img src="ishqlostfound.png" alt="Not Like Us">
+            <h2>Ishq (from"Lost Found")</h2><p>Faheem Abdullah</p>
+        </div>
+        <div class="music-1" data-title="Divide">
+            <img src="blue.png" alt="Divide">
+            <h2>Blue</h2><p>Yung Kai</p>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2 class="footer-logo">Lyricus</h2>
+                <p>Discover lyrics, explore artists, and get inspired by music around the world.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h3>Our Projects</h3>
+                <a href="https://labibliotecaco.vercel.app">La Biblioteca.co</a>
+                <a href="https://flebooks.vercel.app">Flebooks</a>
+                <a href="https://fletodesigns.vercel.app">Fleto</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe</h3>
+                <p>Get updates about new lyrics directly in your inbox</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Lyricus. All rights reserved.</p>
+        </div>
+    </footer>
 
-</footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
