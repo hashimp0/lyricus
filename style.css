@@ -1,149 +1,246 @@
-body{
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+body {
     margin: 0;
-    padding: 0%;
-    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    background: url(bg.jpg);
+    background-size: 500px;
 }
-nav{
-    margin-left: 73%;
-    text-align: center;
-    margin-top: 60px;
+.site-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    color: black;
+    z-index: 1000;
 }
-nav a{
+.site-header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+.site-header nav a {
     text-decoration: none;
     color: black;
-    padding-left: 20px;
-    font-family: roboto;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
-.site-name{
+.site-header nav a:hover {
     color: black;
-    font-size: 100px;
-    font-family: poppins;
+}
+.hero {
     text-align: center;
-    margin-top: 2%;
 }
-.site-usage{
+.hero h1 {
+    font-size: 90px;
+    font-family: 'Poppins', sans-serif;
     color: black;
-    margin-left: 46%;
-    font-family: poppins;
-    margin-top: -5.4%;
+}
+.hero p {
+    font-size: 18px;
+    color: black;
+    margin-top: -105px;
+    margin-left: 70px;
 }
 .search-box {
-    margin-left: 34%;
-    margin-top: 5%;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
+    max-width: 600px;
+    margin-top: 3%;
+    margin-left: 35%;
 }
-
 .search-box input {
-    width: 500px;
-    height: 50px;
-    padding: 0 50px 0 30px;
-    outline: none;
-    font-size: 16px;
-    border: none;
+    width: 100%;
+    padding: 15px 50px 15px 20px;
     border-radius: 30px;
-    background-color: #f5f5f5;
-    color: #333;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-    -webkit-transition: box-shadow 0.3s ease, background 0.3s ease;
-    -moz-transition: box-shadow 0.3s ease, background 0.3s ease;
-    -ms-transition: box-shadow 0.3s ease, background 0.3s ease;
-    -o-transition: box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.search-box input:focus {
-    box-shadow: 0 0 15px rgba(0, 128, 255, 0.4);
+    border: none;
+    outline: none;
+    font-size: 13px;
     background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
-
+.search-box input:focus {
+    box-shadow: 0 4px 20px #e6d5ff;
+}
 .search-button {
-    cursor: pointer;
-    background-color: #f5f5f5;
+    position: absolute;
+    right: 5px;
+    background: black;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-    margin-left: 20px;
+    cursor: pointer;
 }
-
-.search-button:hover {
-    box-shadow: 0 0 15px rgba(0, 128, 255, 0.4);
-    background: #fff;
-}
-
 .search-button svg {
+    fill: #fff;
     width: 24px;
-    height: 24px;
-    fill: black;
 }
-
-/* Clear button (×) */
 .clear-button {
     position: absolute;
     right: 60px;
     font-size: 20px;
-    cursor: pointer;
     color: #999;
+    cursor: pointer;
     display: none;
-    user-select: none;
-}
-.clear-button:hover {
-    color: #333;
-}
-
-section{
-    display: flex;
-    margin-left: 10%;
 }
 .main-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 40px;
-    justify-content: center;
-    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding:6% 10% 10% 10%;
 }
-
 .music-1 {
-    background-color: #fff;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    transition: transform 0.2s ease;
-    margin-bottom: 30%;
-    margin-top: 30%;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
-    -ms-transition: transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .music-1:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-.music-1 h2{
-    font-family: poppins;
-    font-size: 25px;
-    display: none;
+.music-1 img {
+    width: 100%;
+    display: block;
 }
-.music-1 img{
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    width: 250px;
+.music-1 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.music-1 P{
-    display: none;
+.music-1 p {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777;
+    margin-bottom: 15px;
 }
-footer{
-    background-color: black;
-    height: 800px;
-    margin-top: 10%;
+footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 10% 20px 10%;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.footer-links a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: palegreen;
+}
+.newsletter-box {
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #111;
+    margin-top: 10px;
+}
+.newsletter-box input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+.newsletter-box button {
+    background: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+}
+.newsletter-box button:hover {
+    background: black;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #888;
+}
+.name{
+    text-align: center;
+}
+.name h1{
+    font-size: 50px;
+}
+.name h2{
+    font-size: 20px;
+    margin-top: -30px;
+    color: #888;
+}
+.lyrics-section{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10%;
+}
+.lyrics-section p{
+    line-height: 2;
+}
+@media (max-width: 480px) {
+    .hero h1{
+        margin-top: 10px;
+        font-size: 70px;
+    }
+    .hero p{
+        margin-top: -82px;
+    }
+    .search-box{
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: 50px;
+    }
+    .site-header{
+        position: relative;
+    }
+    .site-header .logo{
+        font-size: 20px;
+    }
+    .site-header nav a{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .music-1{
+        margin-top: 40px;
+        width: 250px;
+        margin-left: 12%;
+    }
 }
