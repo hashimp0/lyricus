@@ -6,7 +6,12 @@
     <title>Lyricus - Music Lyrics</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta property="og:title" content="Lyricus | A Free Music Lyrics Searching App" />
+    <meta property="og:description" content="Find and explore free music lyrics easily with Lyricus" />
+    <meta property="og:image" content="https://lyricus.vercel.app/logo.png" />
+    <meta property="og:url" content="https://lyricus.vercel.app/" />
+    <meta property="og:type" content="website" />
 </head>
 <body>
     <header class="site-header">
@@ -33,71 +38,75 @@
     </section>
     <section class="main-section">
         <div class="music-1" data-title="Shape of You">
-            <a href="shapeofyou.html"><img src="shapeofyou.png" alt="Shape of You"></a>
+            <a href="shapeofyou.html"><img id="clickableImage"   src="shapeofyou.png" alt="Shape of You"></a>
             <h2>Shape of You</h2><p>Ed Sheeran</p>
         </div>
         <div class="music-1" data-title="Believer">
-            <a href="believer.html"><img src="believer.jpg" alt="Believer"></a>
+            <a href="believer.html"><img id="clickableImage"  src="believer.jpg" alt="Believer"></a>
             <h2>Believer</h2><p>Imagine Dragons</p>
         </div>
         <div class="music-1" data-title="Faded">
-            <a href="faded.html"><img src="faded.png" alt="Faded"></a>
+            <a href="faded.html"><img id="clickableImage"  src="faded.png" alt="Faded"></a>
             <h2>Faded</h2><p>Alan Walker</p>
         </div>
         <div class="music-1" data-title="Senorita">
-            <img src="Senorita.png" alt="Senorita">
+            <a href="senorita.html"><img id="clickableImage"  src="Senorita.png" alt="Senorita"></a>
             <h2>Senorita</h2><p>Shawn Mendes & Camila Cabello</p>
         </div>
         <div class="music-1" data-title="Let Me Down Slowly">
-            <img src="letmedownslowly.png" alt="Let Me Down Slowly">
+            <img id="clickableImage"  src="letmedownslowly.png" alt="Let Me Down Slowly">
             <h2>Let Me Down Slowly</h2><p>Alec Benjamin</p>
         </div>
         <div class="music-1" data-title="Arcade">
-            <img src="arcade.png" alt="Arcade">
+            <img id="clickableImage"  src="arcade.png" alt="Arcade">
             <h2>Arcade</h2><p>Duncan Laurence</p>
         </div>
         <div class="music-1" data-title="Not Like Us">
-            <img src="notlikeus.png" alt="Not Like Us">
+            <img id="clickableImage"  src="notlikeus.png" alt="Not Like Us">
             <h2>Not Like Us</h2><p>Kendrick Lamar</p>
         </div>
         <div class="music-1" data-title="Divide">
-            <img src="divide.png" alt="Divide">
+            <img id="clickableImage"  src="divide.png" alt="Divide">
             <h2>Divide</h2><p>Ed Sheeran</p>
         </div>
         <div class="hiden">
             <div class="music-1" data-title="Shape of You">
-            <img src="beanie.jpg" alt="Shape of You" onclick="window.location.href='shapeofyou.pdf'">
+            <img id="clickableImage"  src="beanie.jpg" alt="Shape of You" onclick="window.location.href='shapeofyou.pdf'">
             <h2>Beanie</h2><p>Chezile</p>
         </div>
         <div class="music-1" data-title="Believer">
-            <img src="timeless.jpg" alt="Believer">
+            <img id="clickableImage"  src="timeless.jpg" alt="Believer">
             <h2>Timeless</h2><p>The Weekend & ft.Play boi carti</p>
         </div>
         <div class="music-1" data-title="Faded">
-            <img src="hymnoftheweekend.jpg" alt="Faded">
+            <img id="clickableImage"  src="hymnoftheweekend.jpg" alt="Faded">
             <h2>Hymn of The Weekend</h2><p>Coldplay</p>
         </div>
         <div class="music-1" data-title="Senorita">
-            <img src="loveisgone.png" alt="Senorita">
+            <img id="clickableImage"  src="loveisgone.png" alt="Senorita">
             <h2>Love Is Gone</h2><p>SLENDER</p>
         </div>
         <div class="music-1" data-title="Let Me Down Slowly">
-            <img src="sapphire.png" alt="Let Me Down Slowly">
+            <img id="clickableImage"  src="sapphire.png" alt="Let Me Down Slowly">
             <h2>Sapphire</h2><p>Ed Sheeran</p>
         </div>
         <div class="music-1" data-title="Arcade">
-            <img src="mockingbird.jpg" alt="Arcade">
+            <img id="clickableImage"  src="mockingbird.jpg" alt="Arcade">
             <h2>Mockingbird</h2><p>Eminem</p>
         </div>
         <div class="music-1" data-title="Not Like Us">
-            <img src="ishqlostfound.png" alt="Not Like Us">
+            <img id="clickableImage"  src="ishqlostfound.png" alt="Not Like Us">
             <h2>Ishq (from"Lost Found")</h2><p>Faheem Abdullah</p>
         </div>
         <div class="music-1" data-title="Divide">
-            <img src="blue.png" alt="Divide">
+            <img id="clickableImage"  src="blue.png" alt="Divide">
             <h2>Blue</h2><p>Yung Kai</p>
         </div>
         </div>
+        <div id="loader" class="loader hidden">
+  <div></div><div></div><div></div>
+</div>
+
     </section>
     <footer>
         <div class="footer-container">
